@@ -8,6 +8,6 @@ require mathlib from git "https://github.com/leanprover-community/mathlib4" @ "v
 
 @[default_target]
 lean_lib «Lean4Example» {
-  -- add library configuration options here
-  roots := #[`hello]
+  -- add library configuration options here}
+  roots := #[`Lean4Example, `hello]
 }
