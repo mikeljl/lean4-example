@@ -1,3 +1,4 @@
+import Mathlib.Algebra.Group.Defs  -- Import algebra group definitions
 open Nat (add_assoc add_comm)
 
 theorem hello_world (a b c : Nat)
