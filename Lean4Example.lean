@@ -2,6 +2,20 @@ import Mathlib.Algebra.Group.Defs  -- Import algebra group definitions
 import hello
 open Nat (add_assoc add_comm)
 
+import Std.Data.String.Basic -- basic import for string operations
+
+-- Define a simple structure
+structure Person where
+  name : String
+  age  : Nat
+
+-- Provide a ToString instance so we can convert a Person to a string
+instance : ToString Person where
+  toString p := s!"{p.name} is {p.age} years old"
+
+def square (x : ℕ) : ℕ :=
+  x * x
+
 theorem hello_world (a b c : Nat)
   : a + b + c = a + c + b := by
   rw [add_assoc, add_comm b, ←add_assoc]
@@ -17,3 +31,4 @@ theorem left_inverse_of_element (a : G) : a⁻¹ * a = 1 := by
   have h := inv_mul_cancel a
   -- Step 2: Rewrite the goal using the known fact
   rw [h]
+
