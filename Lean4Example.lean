@@ -2,8 +2,6 @@ import Mathlib.Algebra.Group.Defs  -- Import algebra group definitions
 import hello
 open Nat (add_assoc add_comm)
 
-import Std.Data.String.Basic -- basic import for string operations
-
 -- Define a simple structure
 structure Person where
   name : String
