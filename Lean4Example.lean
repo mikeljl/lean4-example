@@ -26,11 +26,12 @@ variable {G : Type*} [Group G]
 
 theorem inv_mul_self' (a : G) : a⁻¹ * a = 1 := inv_mul_cancel a
 
-end TESTTEST
-
 theorem left_inverse_of_element (a : G) : a⁻¹ * a = 1 := by
   -- Step 1: Recall the definition of the inverse in a group
   have h := inv_mul_cancel a
   -- Step 2: Rewrite the goal using the known fact
   rw [h]
+
+end TESTTEST
+
 
